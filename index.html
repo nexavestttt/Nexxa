@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Panel de Ganancias</title>
 
   <style>
@@ -17,38 +18,51 @@
       min-height: 100vh;
       background: #f4f7fb;
       color: #172033;
+
       display: flex;
       justify-content: center;
       align-items: center;
+
       padding: 20px;
     }
 
     .dashboard {
       width: 100%;
       max-width: 480px;
+
       background: #ffffff;
       border-radius: 22px;
-      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.10);
+
+      box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.10);
+
       overflow: hidden;
     }
+
+    /* HEADER */
 
     .header {
       background: #101828;
       color: white;
+
       padding: 28px 25px;
     }
 
     .brand {
       font-size: 14px;
       font-weight: 600;
-      opacity: .75;
+
+      opacity: 0.75;
+
       margin-bottom: 22px;
-      letter-spacing: .5px;
+
+      letter-spacing: 0.5px;
     }
 
     .welcome {
       font-size: 14px;
-      opacity: .75;
+      opacity: 0.75;
+
       margin-bottom: 6px;
     }
 
@@ -57,238 +71,516 @@
       font-weight: 700;
     }
 
+    /* CONTENT */
+
     .content {
       padding: 25px;
     }
 
+    /* PROFIT */
+
     .profit-card {
       background: #f7faf8;
+
       border: 1px solid #e3eee7;
+
       border-radius: 17px;
+
       padding: 24px;
+
       margin-bottom: 18px;
     }
 
     .label {
       font-size: 13px;
+
       color: #667085;
+
       margin-bottom: 9px;
     }
 
     .profit {
       font-size: 36px;
+
       font-weight: 800;
+
       color: #087443;
+
       letter-spacing: -1px;
     }
 
     .status {
       display: inline-flex;
+
       align-items: center;
+
       gap: 7px;
+
       margin-top: 13px;
+
       padding: 7px 11px;
+
       border-radius: 20px;
+
       background: #eaf8f0;
+
       color: #087443;
+
       font-size: 12px;
+
       font-weight: 600;
     }
 
     .dot {
       width: 7px;
       height: 7px;
+
       border-radius: 50%;
+
       background: #12b76a;
     }
 
+    /* INFORMATION */
+
     .info {
       display: grid;
+
       grid-template-columns: 1fr 1fr;
+
       gap: 14px;
+
       margin-bottom: 20px;
     }
 
     .info-box {
       border: 1px solid #eaecf0;
+
       border-radius: 15px;
+
       padding: 18px;
-      background: #fff;
+
+      background: #ffffff;
     }
 
     .info-value {
       font-size: 20px;
+
       font-weight: 700;
+
       margin-top: 6px;
     }
 
+    /* COUNTDOWN */
+
     .countdown-box {
       background: #101828;
+
       color: white;
+
       border-radius: 18px;
+
       padding: 22px;
+
       text-align: center;
+
       margin-bottom: 18px;
     }
 
     .countdown-title {
       font-size: 13px;
-      opacity: .7;
+
+      opacity: 0.7;
+
       margin-bottom: 12px;
     }
 
     #countdown {
       font-size: 38px;
+
       font-weight: 800;
+
       letter-spacing: 2px;
+
+      font-variant-numeric: tabular-nums;
     }
 
     .countdown-note {
       font-size: 11px;
-      opacity: .55;
+
+      opacity: 0.55;
+
       margin-top: 10px;
     }
 
+    /* WITHDRAW BUTTON */
+
     .withdraw-btn {
       width: 100%;
+
       padding: 16px;
+
       border: none;
+
       border-radius: 14px;
+
       background: #d0d5dd;
+
       color: #344054;
+
       font-weight: 700;
+
       font-size: 15px;
+
       cursor: not-allowed;
+
       margin-bottom: 18px;
     }
 
+    /* ENGLISH WARNING */
+
     .notice {
       background: #fff8e8;
+
       border: 1px solid #f6dfad;
+
       color: #795600;
+
       padding: 14px;
+
       border-radius: 13px;
+
       font-size: 12px;
+
       line-height: 1.5;
+
       margin-bottom: 20px;
     }
 
+    /* FOOTER */
+
     .footer {
       text-align: center;
+
       color: #98a2b3;
+
       font-size: 11px;
+
       padding-top: 5px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 400px) {
+
+      .profit {
+        font-size: 31px;
+      }
+
+      #countdown {
+        font-size: 32px;
+      }
     }
   </style>
 </head>
 
+
 <body>
 
-<div class="dashboard">
+  <div class="dashboard">
 
-  <div class="header">
-    <div class="brand">PANEL DE CUENTA</div>
-    <div class="welcome">Titular de la cuenta</div>
-    <div class="name">Alvaro Jose</div>
+    <!-- HEADER -->
+
+    <div class="header">
+
+      <div class="brand">
+        PANEL DE CUENTA
+      </div>
+
+      <div class="welcome">
+        Titular de la cuenta
+      </div>
+
+      <div class="name">
+        Alvaro Jose
+      </div>
+
+    </div>
+
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+
+      <!-- PROFIT -->
+
+      <div class="profit-card">
+
+        <div class="label">
+          Ganancia disponible
+        </div>
+
+        <div class="profit">
+          $13,626.45
+        </div>
+
+        <div class="status">
+
+          <span class="dot"></span>
+
+          Ganancia registrada
+
+        </div>
+
+      </div>
+
+
+      <!-- ACCOUNT INFORMATION -->
+
+      <div class="info">
+
+        <div class="info-box">
+
+          <div class="label">
+            Tarifa de retiro
+          </div>
+
+          <div class="info-value">
+            $50.00
+          </div>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <div class="label">
+            Estado de cuenta
+          </div>
+
+          <div class="info-value">
+            Activa
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- COUNTDOWN -->
+
+      <div class="countdown-box">
+
+        <div class="countdown-title">
+          CUENTA REGRESIVA DE RETIRO
+        </div>
+
+        <div id="countdown">
+          07:08:55
+        </div>
+
+        <div class="countdown-note">
+          El tiempo continúa sin reiniciarse
+        </div>
+
+      </div>
+
+
+      <!-- WITHDRAW BUTTON -->
+
+      <button
+        class="withdraw-btn"
+        type="button"
+        disabled
+      >
+        Retiro restringido
+      </button>
+
+
+      <!-- ENGLISH WARNING -->
+
+      <div class="notice">
+
+        This dashboard is for account information
+        and demonstration purposes. Withdrawal
+        availability should be verified through
+        the applicable financial service.
+
+      </div>
+
+
+      <!-- FOOTER -->
+
+      <div class="footer">
+
+        © 2026 Panel de Cuenta
+
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="content">
 
-    <div class="profit-card">
-      <div class="label">Ganancia disponible</div>
-      <div class="profit">$13,626.45</div>
+  <script>
 
-      <div class="status">
-        <span class="dot"></span>
-        Ganancia registrada
-      </div>
-    </div>
+    /*
+      ==========================================
+      PERSISTENT COUNTDOWN
+      ==========================================
 
-    <div class="info">
+      Starting time:
 
-      <div class="info-box">
-        <div class="label">Tarifa de retiro</div>
-        <div class="info-value">$50.00</div>
-      </div>
+      07:08:55
 
-      <div class="info-box">
-        <div class="label">Estado de cuenta</div>
-        <div class="info-value">Activa</div>
-      </div>
+      The countdown uses an absolute expiry
+      timestamp saved in localStorage.
 
-    </div>
+      Refreshing the page therefore does not
+      restart the countdown.
+    */
 
-    <div class="countdown-box">
-      <div class="countdown-title">
-        CUENTA REGRESIVA DE RETIRO
-      </div>
 
-      <div id="countdown">32:12:55</div>
+    const STORAGE_KEY =
+      "alvaro_withdrawal_expiry";
 
-      <div class="countdown-note">
-        El tiempo continúa sin reiniciarse
-      </div>
-    </div>
 
-    <button class="withdraw-btn">
-      Retiro restringido
-    </button>
+    /*
+      7 hours
+      + 8 minutes
+      + 55 seconds
+    */
 
-    <div class="notice">
-      This dashboard is for account information and demonstration purposes.
-      Withdrawal availability should be verified through the applicable financial service.
-    </div>
+    const countdownDuration =
+      (7 * 60 * 60) +
+      (8 * 60) +
+      55;
 
-    <div class="footer">
-      © 2026 Panel de Cuenta
-    </div>
 
-  </div>
-</div>
+    /*
+      Check whether an expiry timestamp
+      already exists.
+    */
 
-<script>
-const STORAGE_KEY = "withdrawal_expiry";
+    let expiryTime =
+      localStorage.getItem(STORAGE_KEY);
 
-const countdownDuration =
-  (32 * 60 * 60) +
-  (12 * 60) +
-  55;
 
-let expiryTime = localStorage.getItem(STORAGE_KEY);
+    /*
+      If this is the first visit,
+      create the expiry timestamp.
+    */
 
-if (!expiryTime) {
-  expiryTime = Date.now() + (countdownDuration * 1000);
-  localStorage.setItem(STORAGE_KEY, expiryTime);
-}
+    if (!expiryTime) {
 
-expiryTime = Number(expiryTime);
+      expiryTime =
+        Date.now() +
+        (countdownDuration * 1000);
 
-function updateCountdown() {
-  const now = Date.now();
-  let remaining = Math.max(0, expiryTime - now);
+      localStorage.setItem(
+        STORAGE_KEY,
+        expiryTime
+      );
 
-  const totalSeconds = Math.floor(remaining / 1000);
+    }
 
-  const hours = Math.floor(totalSeconds / 3600);
-  const minutes = Math.floor((totalSeconds % 3600) / 60);
-  const seconds = totalSeconds % 60;
 
-  const formatted =
-    String(hours).padStart(2, "0") + ":" +
-    String(minutes).padStart(2, "0") + ":" +
-    String(seconds).padStart(2, "0");
+    expiryTime =
+      Number(expiryTime);
 
-  document.getElementById("countdown").textContent = formatted;
 
-  if (remaining <= 0) {
-    document.getElementById("countdown").textContent = "00:00:00";
-    clearInterval(timer);
-  }
-}
+    /*
+      Update countdown every second.
+    */
 
-updateCountdown();
-const timer = setInterval(updateCountdown, 1000);
-</script>
+    function updateCountdown() {
+
+      const now =
+        Date.now();
+
+
+      let remaining =
+        Math.max(
+          0,
+          expiryTime - now
+        );
+
+
+      const totalSeconds =
+        Math.floor(
+          remaining / 1000
+        );
+
+
+      const hours =
+        Math.floor(
+          totalSeconds / 3600
+        );
+
+
+      const minutes =
+        Math.floor(
+          (totalSeconds % 3600) / 60
+        );
+
+
+      const seconds =
+        totalSeconds % 60;
+
+
+      const formatted =
+
+        String(hours).padStart(2, "0")
+        + ":" +
+
+        String(minutes).padStart(2, "0")
+        + ":" +
+
+        String(seconds).padStart(2, "0");
+
+
+      document.getElementById(
+        "countdown"
+      ).textContent =
+        formatted;
+
+
+      /*
+        Stop when countdown reaches zero.
+      */
+
+      if (remaining <= 0) {
+
+        document.getElementById(
+          "countdown"
+        ).textContent =
+          "00:00:00";
+
+        clearInterval(timer);
+
+      }
+
+    }
+
+
+    /*
+      Run immediately.
+    */
+
+    updateCountdown();
+
+
+    /*
+      Then update every second.
+    */
+
+    const timer =
+      setInterval(
+        updateCountdown,
+        1000
+      );
+
+  </script>
 
 </body>
 </html>
