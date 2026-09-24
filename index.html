@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Panel de Ganancias — Demo</title>
 
   <style>
@@ -223,7 +222,7 @@
       </div>
 
       <div class="name">
-        Diego Rolando
+        Lisandro Torres
       </div>
 
     </div>
@@ -237,7 +236,7 @@
         </div>
 
         <div class="profit">
-          $800.00
+          $3,677.88
         </div>
 
         <div class="status">
@@ -256,7 +255,7 @@
           </div>
 
           <div class="info-value">
-            $25.00
+            $37.00
           </div>
 
         </div>
@@ -282,7 +281,7 @@
         </div>
 
         <div id="countdown">
-          10:30:11
+          19:12:33
         </div>
 
         <div class="countdown-note">
@@ -299,15 +298,12 @@
         Retiro restringido
       </button>
 
-      <!-- Keep this section in English as requested -->
       <div class="notice">
-
         This dashboard is for account information
         and demonstration purposes only. It does not
         verify a real balance, bonus, fee, or withdrawal.
         Withdrawal availability should be verified
         through the applicable financial service.
-
       </div>
 
       <div class="footer">
@@ -318,36 +314,28 @@
 
   </div>
 
-
   <script>
 
     /*
       PERSISTENT DEMO COUNTDOWN
 
       Starting time:
-      10 hours, 30 minutes, 11 seconds.
+      19 hours, 12 minutes, 33 seconds.
 
       The expiry timestamp is saved in localStorage,
       so refreshing the page does not restart it.
     */
 
     const STORAGE_KEY =
-      "diego_demo_withdrawal_expiry";
-
+      "lisandro_demo_withdrawal_expiry";
 
     const countdownDuration =
-      (10 * 60 * 60) +
-      (30 * 60) +
-      11;
-
+      (19 * 60 * 60) +
+      (12 * 60) +
+      33;
 
     let expiryTime =
       localStorage.getItem(STORAGE_KEY);
-
-
-    /*
-      Create the countdown only on first visit.
-    */
 
     if (!expiryTime) {
 
@@ -359,18 +347,13 @@
         STORAGE_KEY,
         expiryTime
       );
-
     }
 
-
-    expiryTime =
-      Number(expiryTime);
-
+    expiryTime = Number(expiryTime);
 
     function updateCountdown() {
 
-      const now =
-        Date.now();
+      const now = Date.now();
 
       const remaining =
         Math.max(
@@ -378,28 +361,23 @@
           expiryTime - now
         );
 
-
       const totalSeconds =
         Math.floor(
           remaining / 1000
         );
-
 
       const hours =
         Math.floor(
           totalSeconds / 3600
         );
 
-
       const minutes =
         Math.floor(
           (totalSeconds % 3600) / 60
         );
 
-
       const seconds =
         totalSeconds % 60;
-
 
       const formatted =
         String(hours).padStart(2, "0") +
@@ -408,11 +386,9 @@
         ":" +
         String(seconds).padStart(2, "0");
 
-
       document.getElementById(
         "countdown"
       ).textContent = formatted;
-
 
       if (remaining <= 0) {
 
@@ -421,14 +397,10 @@
         ).textContent = "00:00:00";
 
         clearInterval(timer);
-
       }
-
     }
 
-
     updateCountdown();
-
 
     const timer =
       setInterval(
